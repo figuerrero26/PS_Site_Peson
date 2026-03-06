@@ -1,0 +1,247 @@
+/* =========================
+   ESTILOS GENERALES DEL SITIO
+   Define tipografía base y elimina márgenes por defecto
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+   Contenedor principal del menú superior
+========================= */
+#navbar {
+  background-color: #050505;
+  padding: 10px;
+}
+
+/* =========================
+   BOTONES DEL NAVBAR (NORMALES)
+   Estilo base para botones dentro del menú
+========================= */
+#navbar button {
+  color: white;
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Efecto hover para botones del navbar */
+#navbar button:hover {
+  background-color: #444;
+}
+
+/* =========================
+   CONTENIDO DE LAS PÁGINAS 
+   Cada sección se muestra u oculta con JavaScript
+========================= */
+.page {
+  padding: 20px;
+  display: none;
+  background-color: #D6BFF5;
+}
+
+
+/* Fondo exclusivo para la página Yamaha */
+#yamaha {
+  background-color: #1C2E4F; /* verde oscuro tipo Yamaha */
+  color: white;
+}
+
+/* Fondo exclusivo para la página kawasaki */
+#kawasaki {
+  background-color: #0b1d14; /* verde oscuro tipo Yamaha */
+  color: white;
+}
+
+
+/* Fondo exclusivo para la página #ducati {*/
+#ducati {
+  background-color: #4F1C27; /* verde oscuro tipo Yamaha */
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* Botones internos dentro de cada página */
+.page button {
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/* =========================
+   BOTÓN DEGRADADO ANIMADO
+   Estilo tomado de Uiverse con animación y efectos visuales
+========================= */
+.gradient-button {
+  position: relative;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+/* Escalado suave al pasar el cursor */
+.gradient-button:hover {
+  transform: scale(1.03);
+}
+
+/* Fondo animado con degradado cónico */
+.gradient-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57,
+    #ff9ff3,
+    #ff6b6b
+  );
+  z-index: -2;
+  filter: blur(10px);
+  transform: rotate(0deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+/* Rotación del degradado al hacer hover */
+.gradient-button:hover::before {
+  transform: rotate(180deg);
+}
+
+/* Capa interna oscura del botón */
+.gradient-button::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: black;
+  border-radius: 47px;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+/* =========================
+   TEXTO DEGRADADO DEL BOTÓN
+   Controla el color y animación del texto
+========================= */
+.gradient-text {
+  color: transparent;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57,
+    #ff9ff3,
+    #ff6b6b
+  );
+  background-clip: text;
+  filter: hue-rotate(0deg);
+}
+
+/* Animación continua del color del texto */
+.gradient-button:hover .gradient-text {
+  animation: hue-rotating 2s linear infinite;
+}
+
+/* Efecto de presión al hacer click */
+.gradient-button:active {
+  transform: scale(0.99);
+}
+
+/* Animación de rotación de color */
+@keyframes hue-rotating {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* =========================
+   TIPOGRAFÍA GENERAL
+   Estilo de títulos y listas
+========================= */
+
+
+h1, h2, h3, ul {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+}
+
+
+
+
+/* =========================
+   IMAGEN DE LA PÁGINA INICIO
+   Controla tamaño y bordes de la imagen
+========================= */
+.img-inicio {
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+
+/* Carrusel motos */
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.carousel-img {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}

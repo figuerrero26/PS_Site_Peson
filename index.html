@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qué Marca Elegir</title>
+  <link rel="icon" href="https://vectorseek.com/wp-content/uploads/2023/05/MOTOGP-LOGO-VECTOR.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="navbar">
+    <button id="btn-inicio" class="gradient-button" onclick="showPage('inicio')">
+      <span class="gradient-text">Inicio</span>
+    </button>
+
+    <button id="btn-yamaha" class="gradient-button" onclick="showPage('yamaha')">
+      <span class="gradient-text">Yamaha</span>
+    </button>
+
+    <button id="btn-kawasaki" class="gradient-button" onclick="showPage('kawasaki')">
+      <span class="gradient-text">Kawasaki</span>
+    </button>
+
+    <button id="btn-ducati" class="gradient-button" onclick="showPage('ducati')">
+      <span class="gradient-text">Ducati</span>
+    </button>
+  </div>
+
+  <div id="content">
+
+    <!-- Página de Inicio -->
+    <div id="inicio" class="page">
+      <h1>¿Qué marca de motocicleta elegir?</h1>
+
+      <p>
+        Esta aplicación permite analizar diferentes marcas de motocicletas
+        según su enfoque, tipo de uso y perfil del conductor, con el objetivo
+        de apoyar una decisión informada.
+      </p>
+        <center><img src="https://wallpapercave.com/wp/wp15076775.webp" alt="Motociclismo deportivo" class="img-inicio"></center>
+      <h2>Criterios de selección</h2>
+      <ul>
+        <li>Tipo de uso: ciudad, carretera o mixto</li>
+        <li>Cilindrada y potencia</li>
+        <li>Costos de mantenimiento</li>
+        <li>Disponibilidad de repuestos</li>
+        <li>Nivel de experiencia del conductor</li>
+      </ul>
+
+      <h2>Perfil del conductor</h2>
+      <ul>
+        <li>Principiante: control, estabilidad y facilidad de manejo</li>
+        <li>Intermedio: equilibrio entre potencia y confort</li>
+        <li>Avanzado: alto rendimiento y tecnología</li>
+      </ul>
+
+      <center><p>
+        Utilice el menú superior para seleccionar una marca y conocer
+        algunos de sus modelos representativos.
+      </p></center>
+    </div>
+
+    <!-- Yamaha -->
+    <div id="yamaha" class="page">
+
+      <center><h1>Yamaha MT-09 V4</h1></center>
+
+      <div class="carousel">
+        <img src="https://i.pinimg.com/originals/15/ea/85/15ea8559f09428e1bcb7817b0418dfa7.jpg" class="carousel-img active" alt="Yamaha MT-09 frontal">
+        <img src="https://i.ytimg.com/vi/fEYzDbqlwDs/hqdefault.jpg" class="carousel-img" alt="Yamaha MT-09 lateral">
+        <img src="https://i.blogs.es/8e51f2/yamaha_mt09_20_650/original.jpg" class="carousel-img" alt="Yamaha MT-09 trasera">
+
+        <button class="carousel-btn prev" onclick="prevSlide(this)">‹</button>
+        <button class="carousel-btn next" onclick="nextSlide(this)">›</button>
+      </div>
+
+      <center>
+        <p>
+          La Yamaha MT-09 V4 es una motocicleta naked deportiva, equipada con motor CP3
+          de 890 cc, electrónica avanzada y un enfoque orientado al alto rendimiento.
+        </p>
+      </center>
+
+  </div>
+      <!-- Kawasaki -->
+      <div id="kawasaki" class="page">
+
+        <center><h1>Z900</h1></center>
+
+        <div class="carousel">
+          <img src="https://cdpcdn.dx1app.com/products-private/prod/52f093a6-1ac1-436a-85ce-5b7e5afe6d42/1463d0bc-c698-4c19-87c8-b18c01167744/00000000-0000-0000-0000-000000000000/a0a71217-3cad-4437-8332-b21a002dd88d/08bd516a-88b9-4287-bdc5-b27a016ef1c5/6000000016.jpg"
+              class="carousel-img active" alt="z900">
+
+          <img src="https://tse1.mm.bing.net/th/id/OIP.CxUM4uQztl3m7Vr4P6X-2AHaE8?w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
+              class="carousel-img" alt="z900">
+
+          <img src="https://content2.kawasaki.com/ContentStorage/KMC/Products/9592/356b40aa-4eb5-446a-8b39-a30a56799f23.jpg"
+              class="carousel-img" alt="z900">
+
+          <button class="carousel-btn prev" onclick="prevSlide(this)">‹</button>
+          <button class="carousel-btn next" onclick="nextSlide(this)">›</button>
+        </div>
+
+        <center>
+          <p>
+            La Kawasaki Z900 es una motocicleta naked de alto rendimiento equipada con
+            un motor de cuatro cilindros en línea de 948 cc.
+          </p>
+
+          <p>
+            Incorpora control de tracción, modos de conducción y una estructura ligera
+            orientada a conductores intermedios y avanzados.
+          </p>
+        </center>
+
+      </div>
+
+    <!-- Ducati -->
+    <div id="ducati" class="page">
+
+      <center><h1>Ducati Streetfighter V4</h1></center>
+
+       <div class="carousel">
+        <img src="https://s1.cdn.autoevolution.com/images/news/ducati-streetfighter-v4-sp-is-the-ultimate-italian-naked-first-hot-bike-of-2022-174055_1.jpg"
+             class="carousel-img active"
+             alt="Ducati Streetfighter V4 frontal">
+
+         <img src="https://www.moto.ch/wp-content/uploads/2022/10/MY23_Ducati_Streetfighter_V4S-_201__UC445889_High-1.jpg"
+             class="carousel-img"
+            alt="Ducati">
+        <img src="https://cdn-fastly.motorcycle.com/media/2023/03/20/11190931/2023-ducati-streetfighter-v4-v4-s-and-v4-sp2-first-look.jpg?size=720x845&nocrop=1"
+            class="carousel-img"
+            alt="Ducati">
+        <button class="carousel-btn prev" onclick="prevSlide(this)">‹</button>
+        <button class="carousel-btn next" onclick="nextSlide(this)">›</button>
+        </div>
+
+        <center>
+          <p>
+            La Ducati Streetfighter V4 es una motocicleta naked de alto rendimiento,
+            equipada con motor Desmosedici Stradale V4, electrónica avanzada y un diseño
+            enfocado en la máxima entrega de potencia y control.
+          </p>
+        </center>
+
+      </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
