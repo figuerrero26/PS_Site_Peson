@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"No tests yet\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo \"No build step\""
   },
   "repository": {
     "type": "git",
